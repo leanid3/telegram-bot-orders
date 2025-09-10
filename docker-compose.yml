@@ -1,12 +1,16 @@
 services:
   nodejs:
-    image: node:20-alpine
+    build:
+      context: .
+      dockerfile: _docker/nodejs/Dockerfile
+      target: production
     container_name: nodejs
     ports:
       - 3000:3000
     volumes:
       - ./app:/app
+      - /app/node_modules
     working_dir: /app
-    command: npm start
+    command: npm run dev
     env_file:
-      - ./app/.env
+      - ./.env
