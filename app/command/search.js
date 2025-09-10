@@ -1,4 +1,4 @@
-import { getVacanciesByRegion } from "../api/vacancies"
+import { getVacanciesByRegion, getVacancies } from "../api/vacancies.js"
 
 export default class SearchCommand {
     constructor(bot) {

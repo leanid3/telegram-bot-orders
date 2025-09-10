@@ -17,7 +17,9 @@ class BotTelegraf {
 
 
     launch() {
-        this.commands = [new StartCommand(this.bot), new HelpCommand(this.bot), new SetupCommand(this.bot, new SearchCommand(this.bot))]
+        this.commands = [new StartCommand(this.bot), new HelpCommand(this.bot), new SetupCommand(this.bot)
+        // ,  new SearchCommand(this.bot)
+        ]
         this.commands.forEach(command => command.exec())
         this.bot.launch()
     }

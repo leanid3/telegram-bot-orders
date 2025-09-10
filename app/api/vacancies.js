@@ -1,4 +1,4 @@
-const getVacancies = async (filter) => {
+export const getVacancies = async (filter) => {
 
     try {
         
@@ -18,7 +18,7 @@ const getVacancies = async (filter) => {
     }
 }
 
-const getVacanciesByRegion = async (regionCode, params) => {
+export const getVacanciesByRegion = async (regionCode, params) => {
     try {
         const query = new URLSearchParams(params) ?? {limit: 10}
 
@@ -35,5 +35,3 @@ const getVacanciesByRegion = async (regionCode, params) => {
         return null
     }
 }
-
-export { getVacancies, getVacanciesByRegion }
